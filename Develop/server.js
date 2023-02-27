@@ -1,17 +1,19 @@
 const express = require('express');
 
-const fs = require('fs');
-const path = require('path');
-const htmlRoutes = require('./routes/htmlRoutes');
-
+const notesRouter = require('./routes/notes.router');
+const htmlRouter = require('./routes/html.router');
 
 const PORT = process.env.PORT || 3001;
 
-// Import our modular routers for /notes
-const notesRouter = require('./routes/notes.router');
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.static('public'));
 
 const app = express();
 
-app.use('/notes', notesRouter);
+app.use("/api", notesRouter);
+app.use("/", htmlRouter);
 
-module.exports = app;
+app.listen(PORT, () => {
+    console.log(`Listening on PORT: ${PORT}`);
+});
