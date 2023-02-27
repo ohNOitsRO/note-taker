@@ -1,17 +1,17 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 function createNewNote(body, notesArray) {
   const note = body;
   notesArray.push(note);
   fs.writeFileSync(
-    path.join(__dirname, '../db/db.json'),
+    path.join(__dirname, "../db/db.json"),
     JSON.stringify({ notesArray }, null, 2)
   );
   return note;
 }
 
-// delete note with matching index
+// Checks for a matching index and deletes note
 function deleteNote(id, notes) {
   let notesArray = notes.filter(el => {
     if (el.id == id) {
@@ -29,9 +29,9 @@ function deleteNote(id, notes) {
     index += 1;
   });
 
-  //write to file
+//Write to notes array
   fs.writeFileSync(
-    path.join(__dirname, '../db/db.json'),
+    path.join(__dirname, "../db/db.json"),
     JSON.stringify({ notesArray }, null, 2)
   );
   return notesArray;
