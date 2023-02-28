@@ -1,5 +1,9 @@
-[
+{
+  "notesArray": [
     {
-        "notesArray": []
+      "title": "maybe this will work",
+      "text": "i wish",
+      "id": "0"
     }
-]
+  ]
+}
