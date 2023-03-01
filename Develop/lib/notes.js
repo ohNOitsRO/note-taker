@@ -22,7 +22,7 @@ function deleteNote(id, notes) {
     }
   })
 
-  // re-index 
+ 
   let index = 0;
   notesArray.forEach(note => {
     note.id = index;
