@@ -2,7 +2,7 @@
 
 ## Description
 
-An express 
+An express driven heroku hosted website for simple note taking.  Keep track of multiple notes in an organized fashion, and add or delete notes as you please.  With the data being stored on a heroku server, it will persist through browser refreshes and multiple visits to the website.
 
 ## Table of Contents
 
