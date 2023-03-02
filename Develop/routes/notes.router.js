@@ -13,16 +13,10 @@ notesRoute.get('/notes', (req, res) => {
 // POST Route for submitting notes
 
 notesRoute.post('/notes', (req, res) => {
-  if (notesArray) {
-    req.body.id = notesArray.length.toString();
+  
+    req.body.id = notesArray.length + 1;
 
-  } 
-  else {
-    req.body.id = 0;
-
-  }
-
-  res.json(createNewNote(req.body, notesArray));
+    res.json(createNewNote(req.body, notesArray));
 
 });
 
