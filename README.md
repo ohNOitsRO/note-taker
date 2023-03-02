@@ -4,6 +4,7 @@
 
 An express driven heroku hosted website for simple note taking.  Keep track of multiple notes in an organized fashion, and add or delete notes as you please.  With the data being stored on a heroku server, it will persist through browser refreshes and multiple visits to the website.
 
+
 ## Table of Contents
 
 - [Installation](#installation)
@@ -11,16 +12,19 @@ An express driven heroku hosted website for simple note taking.  Keep track of m
 - [Credits](#credits)
 - [License](#license)
 
+
 ## Installation
 
-No install necessary! Just visit the website at:
+No install necessary! 
+Just visit the website at: https://pacific-garden-06481.herokuapp.com/
 
 
 ## Usage
 
 Preview of website layout and design.
 
-![Sample Website Preview](./assets/images/team-profile-generator-demo.PNG)
+![Sample Landing Page Preview](../note-taker/Develop/public/assets/images/landing-page.PNG)
+![Sample Landing Page Preview](../note-taker/Develop/public/assets/images/notes-page-example.PNG)
 
 Link to video demo of application.
 
