@@ -1,5 +1,7 @@
 [
   {
-  "notesArray": []
+  "title": "Some Note",
+  "text": "Some text for my note!",
+  "id": "1"
   }
 ]
