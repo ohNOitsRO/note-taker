@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
+// Creates note and pushes it into array
 function createNote(body, notesContent) {
   const newNote = body;
   notesContent.push(newNote);
@@ -10,43 +11,44 @@ function createNote(body, notesContent) {
     JSON.stringify(notesContent)
 
   );
+
+  return newNote;
 }
 
 
-// Checks for a matching index and deletes note
-function deleteNote(id, notes) {
-  let notesContent = notes.filter(erase => {
-    if (erase.id == id) {
-      return false;
+// Deletes note and changes index of notes in array
+// function deleteNote(id, notes) {
+  // let notesContent = notes.filter(erase => {
+  //   if (erase.id == id) {
+  //     return false;
 
-    } 
-    else {
-      return true;
+  //   } 
+  //   else {
+  //     return true;
 
-    }
-  })
+  //   }
+  // });
 
-  let index = 0;
+  
+function deleteNote(note, notesContent) {
+    const noteIndex = notesContent.indexOf(note);
+    notesContent.splice(noteIndex, 1);
+
+  let i = 0;
 
   notesContent.forEach(note => {
-    note.id = index;
-    index = index + 1;
+    note.id = i;
+    i = i + 1;
 
   });
 
-// function deleteNote (id, notesContent) {
-  
-//   let noteIndex = notesContent.indexOf(id);
-//   notesContent.splice(noteIndex, 1)
-
-
-
-//Write to notes array
   fs.writeFileSync(
     path.join(__dirname, "../db/db.json"),
     JSON.stringify({ notesContent })
 
   );
+
+  return notesContent;
 };
 
 
@@ -54,3 +56,11 @@ module.exports = {
   createNote, deleteNote
 
 };
+
+
+
+
+// const deleteNote = (note, notesContent) => {
+//     // removes specific note from notes array
+//     const noteIndex = notesContent.indexOf(note);
+//     notesContent.splice(noteIndex, 1);

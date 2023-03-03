@@ -26,10 +26,6 @@ Preview of website layout and design.
 ![Sample Landing Page Preview](../note-taker/Develop/public/assets/images/landing-page.PNG)
 ![Sample Landing Page Preview](../note-taker/Develop/public/assets/images/notes-page-example.PNG)
 
-Link to video demo of application.
-
-https://www.youtube.com/watch?v=G_17Hx0lcC0
-
 
 ## Credits
 
