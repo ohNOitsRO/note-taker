@@ -16,20 +16,7 @@ function createNote(body, notesContent) {
 }
 
 
-// Deletes note and changes index of notes in array
-// function deleteNote(id, notes) {
-  // let notesContent = notes.filter(erase => {
-  //   if (erase.id == id) {
-  //     return false;
-
-  //   } 
-  //   else {
-  //     return true;
-
-  //   }
-  // });
-
-  
+// Deletes note and changes index of notes in array (Currently only deletes the last note input)
 function deleteNote(note, notesContent) {
     const noteIndex = notesContent.indexOf(note);
     notesContent.splice(noteIndex, 1);
@@ -56,11 +43,3 @@ module.exports = {
   createNote, deleteNote
 
 };
-
-
-
-
-// const deleteNote = (note, notesContent) => {
-//     // removes specific note from notes array
-//     const noteIndex = notesContent.indexOf(note);
-//     notesContent.splice(noteIndex, 1);
