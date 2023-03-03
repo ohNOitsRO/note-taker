@@ -2,14 +2,15 @@ const fs = require("fs");
 const path = require("path");
 
 function createNewNote(body, notesContent) {
-  const note = body;
-  notesContent.push(note);
+  const newNote = body;
+  notesContent.push(newNote);
+  
   fs.writeFileSync(
     path.join(__dirname, "../db/db.json"),
     JSON.stringify(notesContent)
   );
 
-  return note;
+  return newNote;
 
 }
 
