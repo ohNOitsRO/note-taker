@@ -1,5 +1,6 @@
 const notesRoute = require("express").Router();
 const { createNote, deleteNote } = require("../lib/notes");
+
 let notesContent = require("../db/db");
 
 // GET Route for retrieving all the notes
