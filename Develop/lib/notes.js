@@ -1,20 +1,22 @@
 const fs = require("fs");
 const path = require("path");
 
-function createNewNote(body, notesArray) {
+function createNewNote(body, notesContent) {
   const note = body;
-  notesArray.push(note);
+  notesContent.push(note);
   fs.writeFileSync(
     path.join(__dirname, "../db/db.json"),
-    JSON.stringify(notesArray, null, 2)
+    JSON.stringify(notesContent, null, 2)
   );
+
   return note;
+
 }
 
 // Checks for a matching index and deletes note
 function deleteNote(id, notes) {
-  let notesArray = notes.filter(el => {
-    if (el.id == id) {
+  let notesContent = notes.filter(erase => {
+    if (erase.id == id) {
       return false;
     } 
     else {
@@ -22,9 +24,9 @@ function deleteNote(id, notes) {
     }
   })
 
- 
   let index = 0;
-  notesArray.forEach(note => {
+
+  notesContent.forEach(note => {
     note.id = index;
     index += 1;
   });
@@ -32,12 +34,13 @@ function deleteNote(id, notes) {
 //Write to notes array
   fs.writeFileSync(
     path.join(__dirname, "../db/db.json"),
-    JSON.stringify({ notesArray }, null, 2)
+    JSON.stringify({ notesContent }, null, 2)
   );
-  return notesArray;
+
+  return notesContent;
+
 }
 
 module.exports = {
-  createNewNote,
-  deleteNote
+  createNewNote,deleteNote
 };
