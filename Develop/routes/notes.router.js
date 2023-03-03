@@ -1,5 +1,5 @@
 const notesRoute = require("express").Router();
-const { createNewNote, deleteNote } = require("../lib/notes");
+const { createNote, deleteNote } = require("../lib/notes");
 let notesContent = require("../db/db");
 
 // GET Route for retrieving all the notes
@@ -14,7 +14,7 @@ notesRoute.get("/notes", (req, res) => {
 
 notesRoute.post("/notes", (req, res) => {
     req.body.id = notesContent.length + 1;
-    res.json(createNewNote(req.body, notesContent));
+    res.json(createNote(req.body, notesContent));
 
 });
 
