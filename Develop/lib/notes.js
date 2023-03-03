@@ -34,12 +34,12 @@ function createNote(body, notesContent) {
 
 //   });
 
-function deleteNote (id, notesContent) {
+function deleteNote (id, notes) {
   
-  let noteIndex = notesContent.indexOf(id);
-  notesContent.splice(noteIndex, 1)
+  let noteIndex = notes.indexOf(id);
+  notes.splice(noteIndex, 1)
 
-};
+
 
 //Write to notes array
   fs.writeFileSync(
@@ -47,6 +47,7 @@ function deleteNote (id, notesContent) {
     JSON.stringify({ notesContent })
 
   );
+};
 
 
 module.exports = {
