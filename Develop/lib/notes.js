@@ -6,7 +6,7 @@ function createNewNote(body, notesContent) {
   notesContent.push(note);
   fs.writeFileSync(
     path.join(__dirname, "../db/db.json"),
-    JSON.stringify(notesContent, null, 2)
+    JSON.stringify(notesContent, null, 1)
   );
 
   return note;
@@ -34,7 +34,7 @@ function deleteNote(id, notes) {
 //Write to notes array
   fs.writeFileSync(
     path.join(__dirname, "../db/db.json"),
-    JSON.stringify({ notesContent }, null, 2)
+    JSON.stringify({ notesContent }, null, 1)
   );
 
   return notesContent;
