@@ -14,30 +14,30 @@ function createNote(body, notesContent) {
 
 
 // Checks for a matching index and deletes note
-// function deleteNote(id, notes) {
-//   let notesContent = notes.filter(erase => {
-//     if (erase.id == id) {
-//       return false;
+function deleteNote(id, notes) {
+  let notesContent = notes.filter(erase => {
+    if (erase.id == id) {
+      return false;
 
-//     } 
-//     else {
-//       return true;
+    } 
+    else {
+      return true;
 
-//     }
-//   })
+    }
+  })
 
-//   let index = 0;
+  let index = 0;
 
-//   notesContent.forEach(note => {
-//     note.id = index;
-//     index = index + 1;
+  notesContent.forEach(note => {
+    note.id = index;
+    index = index + 1;
 
-//   });
+  });
 
-function deleteNote (id, notes) {
+// function deleteNote (id, notesContent) {
   
-  let noteIndex = notes.indexOf(id);
-  notes.splice(noteIndex, 1)
+//   let noteIndex = notesContent.indexOf(id);
+//   notesContent.splice(noteIndex, 1)
 
 
 
