@@ -35,7 +35,7 @@ https://materializecss.com/
 Node.js for its CLI capabilities  
 https://nodejs.org/en/
 
-Express.js for its web framework allowing server deoplyment
+Express.js for its web framework allowing server deployment
 https://expressjs.com/
 
 Heroku for hosting the live deployed website
